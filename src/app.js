@@ -21,6 +21,11 @@ initializeSocket(server);
 app.use(cors());
 app.use(express.json());
 
+// Test
+app.get("/test", (req, res) =>
+  res.json({ message: "Docker is working fine." })
+);
+
 // Routes
 app.use("/api/users", userRoutes);
 app.use("/api/messages", messageRoutes);
